@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Notedfly</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">7
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+  </head>
+  <body>
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+          <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo.png" alt="logo" style="width: 200px;" /></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+              </div>
+            </form>
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="assets/images/faces/face1.jpg" alt="image">
+                  <span class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">David Greymaax</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                
+                <a class="dropdown-item" href="index.html">
+                  <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block full-screen-link">
+              <a class="nav-link">
+                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+              </a>
+            </li>
+          
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">
+                <span class="menu-title">Profile</span>
+                <i class="fa fa-user menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">
+                <span class="menu-title">history</span>
+                <i class="fa fa-history menu-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h1 class="page-title" style="font-size: 40px; color: #3B5355;" >
+                Your History 
+              </h1>
+            </div>
+            <h5 class="page-title" style="color: #3B5355; margin-bottom: 20px;" >
+              View Your Income & Expense            
+            </h5>
+            <div class="col-lg-12 stretch-card">
+              <div class="card">
+                <div class="card-body" style="background-color: #374D49;">
+                  <table class="table table-bordered" style="background-color: #374D49; color: #C3D0C7; border-color: #2B3B37;">
+                    <thead style="background-color: #2B3B37; color: #E5E9E4; border-color: #2B3B37;">
+                      <tr>
+                        <th style="background-color: #2B3B37; color: white;">  </th>
+                        <th style="background-color: #2B3B37; color: white;"> Nominal </th>
+                        <th style="background-color: #2B3B37; color: white;"> Categories </th>
+                        <th style="background-color: #2B3B37; color: white;"> Date </th>
+                      </tr>
+                    </thead>
+                    <tbody id="transaction-data" style="color: #C3D0C7;">
+                      <!-- Data akan dimasukkan secara dinamis -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+          </div>
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/chart.js/chart.umd.js"></script>
+    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/chart.js"></script>
+
+  </body>
+</html>
+<script>
+  // Fungsi untuk memuat data dari API
+  async function fetchTransactionData() {
+    try {
+      const response = await fetch("http://localhost:8000/api/transaksi");
+      const data = await response.json();
+
+      if (data.status && data.data.length > 0) {
+        renderTableData(data.data);
+      } else {
+        document.querySelector(".table tbody").innerHTML = `
+          <tr>
+            <td colspan="4" class="text-center" style="background-color: #2B3B37; color: white;">No data available</td>
+          </tr>`;
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      document.querySelector(".table tbody").innerHTML = `
+        <tr>
+          <td colspan="4" class="text-center">Error fetching data</td>
+        </tr>`;
+    }
+  }
+
+  // Fungsi untuk merender data ke tabel
+  function renderTableData(transactions) {
+  const tableBody = document.querySelector(".table tbody");
+  tableBody.innerHTML = ""; // Kosongkan tabel sebelum memasukkan data baru
+
+  transactions.forEach((transaction, index) => {
+    const isPengeluaran = transaction.jenis === "Pengeluaran"; // Cek jenis transaksi
+    const row = `
+      <tr>
+        <td style="background-color: #2B3B37; color: white; text-align: center;">
+          ${isPengeluaran ? '-' : '+'}
+        </td>
+        <td style="background-color: #2B3B37; color: ${isPengeluaran ? 'red' : 'white'};">
+          ${parseFloat(transaction.jumlah).toLocaleString("id-ID", {
+            style: "currency",
+            currency: "IDR",
+          })}
+        </td>
+        <td style="background-color: #2B3B37; color: white;">
+          ${transaction.kategori || "-"}
+        </td>
+        <td style="background-color: #2B3B37; color: white;">
+          ${new Date(transaction.tanggal).toLocaleDateString("id-ID")}
+        </td>
+      </tr>`;
+    tableBody.innerHTML += row;
+  });
+}
+
+
+  // Panggil fungsi untuk memuat data setelah halaman dimuat
+  document.addEventListener("DOMContentLoaded", fetchTransactionData);
+</script>
+
